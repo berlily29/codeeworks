@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "/js/to-do.js"> </script>
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <title>Dashboard</title>
+</head>
+<body id = "body">
+
+    <div class="add-splash" id = "asp" >
+        <div class="asp-box">
+            <div class="asp-title">
+                <h1> Adding your task to the database! </h1>
+            </div>
+
+            <div class="asp-gif">
+                <img src = "assets/img/loading_add.gif"/> 
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="splash" id = "splash">
+        <div class="splash-box">
+            <div class="spb" id = "welcomeuser"></div>
+            <div class="spb">
+                <h3>We're updating the dashboard! Sit back and Relax! </h3>
+            </div>
+            
+            <div class="spb">
+                <img src = "../assets/img/loading_welcome.gif"/>
+            </div>
+             
+        </div>
+    </div>
+
+
+   
+    
+    
+
+    <div class="main-section">
+
+        <div class="header">
+            <div class="header-box">
+                <div class="logged-user">
+                    <div class="lu-div" id = "lutitle">
+                        <h1 id="logged"></h1> <!--- the logged user will be set here-->
+                    </div>
+
+                    <div class="lu-div">
+                        <div class="lu-btn">
+                            <a href = "/message/messages.html"> 
+                                Messages
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="lu-div">
+                        
+                            <div class="lu-btn">
+                                <a href = "https://codeeworks.bitbucket.io/Login/login.html"> 
+                                    Logout
+                                </a>
+                           
+                            </div>
+
+                    </div>
+                </div>
+        
+                <div class="add-section">
+                    <div class="as-title">
+                        <h1> ADD NEW TASK </h1>
+                    </div> 
+
+                    <div class="as-form">
+                        <form action="https://script.google.com/macros/s/AKfycbwShAmfhynCnzothrNG71byjVUxTGPlg4yYNuwVUNd--uUa3pmpptoA_ZFwB4CDjdll/exec" method = "post">
+                            <input type = "text" id = "loggeduser" name = "user"/> 
+                        
+                            <input type = "text" name = "task">
+                            
+                            <input type = "date" name = "duedate">
+                            <input type="submit" id="task" value="Add Task"> 
+                            
+                            
+                        
+                            <span id = "msg"> </span>
+                        </form>
+                    </div>
+        
+                </div>
+            </div>
+
+
+        </div>
+        
+    
+        <div class="show-todo-section">
+
+            <div class="submit-todo">
+                <div class="st-title">
+                    <h1> YOUR TASKS THIS MONTH </h1>
+                </div>
+
+                <div class="st-subtitle">
+                    <h3> We will email you when the date is near! </h3>
+                </div>
+            </div> 
+
+            
+            <div class="todo-form">
+                <form action = "https://script.google.com/macros/s/AKfycbwuhSto_ucTdRHCClEwLQkMDnz75X0T106Nxj_VitvmOQ3HM_za-eSZd6il99E1M_fUJA/exec" id = "removeTask"> 
+                <table id="todo">
+
+                </table>
+                
+                </form>
+            </div>
+        </div> 
+
+    </div> 
+           
+</body>
+ <script src = "/todo/task.js"> </script>
+<script> 
+document.getElementById("welcomeuser").innerHTML = `<h1> Hello, ${localStorage.getItem("loggedEmail")}!`
+document.getElementById("logged").innerHTML = localStorage.getItem("loggedEmail")
+document.getElementById("loggeduser").value = localStorage.getItem("loggedEmail")
+
+</script> 
+</html>

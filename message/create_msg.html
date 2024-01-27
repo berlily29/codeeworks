@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <script src="./message.js"></script>
+    <link rel = "stylesheet" href = "../css/msg.css"/> 
+</head>
+<body>
+    <div class="splash-msg">
+        <div class="cm-splash-box">
+            <div class="cm-header">
+                <div class="cm-cancel">
+                    <a href = "messages.html"> Cancel </a>
+                </div>
+                <div class="cm-title">
+                    
+                    <h1> Compose a Message </h1>
+                </div>
+            </div>
+            
+            <div class="cm-content">
+                <form action="https://script.google.com/macros/s/AKfycbxb0SOYV3-VXB-hvuxQdN5Uz9dpKP4xBJK9McSKLSmh6PEJIorscrhk6vDZtiHML-6M/exec" method = "post">
+                    <div class="rec">
+                        <div class="rec-t">
+                            <h1> Receipient: </h1>
+                        </div>
+
+                        <div id="hidden-in">    
+
+                        </div>
+
+                        <div class="rec-i">
+                            
+                            <input type = "text" name = "receiver" placeholder="email@provider.com"/>
+                        </div> 
+                    </div>
+                    
+                    <div class="form-msg">
+                        <div class="form-input">
+
+                            <div class="rec-t">
+                                <h1> Message </h1>
+                            </div>
+                            <div class="rec-i">
+                                <textarea name="message" rows="4" placeholder="Enter your message here"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="msg-holder">
+                            <span id = "msg"></span>
+                        </div>
+                    </div>
+
+                    <div class="sub-div">
+                        <input type="submit" id="task" value="Send Message ➤"> 
+                    </div>
+                    
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="back">
+                <div class="back-btn">
+                    <a href = "../dashboard.html">
+                        ↲ Back to Home
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="title">
+                <div class="main-title">
+                    <h1> MESSAGES - Inbox</h1>
+                </div> 
+
+                <div class="sub-title">
+                    <h2 id = "loggeduser"> </h2>
+                </div>
+
+            </div>
+
+            <div class="sent-buttons">
+                <div class="sb-box">
+                    <div class="sb-btn">
+                        <a href = "outbox.html"> OUTBOX</a>
+                    </div>
+                </div>
+                
+                <div class="sb-box">
+                    <div class="sb-btn">
+                        <a href = "create_msg.html">  SEND A MESSAGE ➤ </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-content">
+            <div class="con-box">
+                <div class="con-header">
+                    <div class="ch-field" id = "leftcor">
+                        <h1> Sender </h1>
+                    </div>
+
+                    <div class="ch-field">
+                        <h1> Date </h1>
+                    </div>
+
+                    <div class="ch-field">
+                        <h1> Time </h1>
+                    </div>
+
+                    <div class="ch-field" id = "rightcor">
+                        <h1> Message </h1>
+                    </div>
+
+
+                </div>
+
+                <div class="con-msg" id = "con-msg">
+                    
+
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+</body>
+<script src = "getmsg_noload.js"> </script> 
+<script src = "send.js"> </script>
+<script>
+    document.getElementById("loggeduser").innerText = localStorage.getItem("loggedEmail")
+
+    document.getElementById("hidden-in").innerHTML =  `<input type=text name = "sender" value ="${localStorage.getItem("loggedEmail")}"/>`
+</script>
+
+</html>

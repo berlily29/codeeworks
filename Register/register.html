@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - CodeeWorks </title>
+    <link rel = "stylesheet" href = "../css/loginreg.css"/> 
+
+</head>
+<body>
+    <div class="container">
+        <div class="reg-box">
+            <div class="left-reg"> 
+                <div class="b2l">
+                    <div class="b2l-btn">
+                        <h1> <a href = "../Login/login.html">↵ Back to Login</a></h1>
+                    </div>
+                </div>
+
+                <div class="left-logo">
+                    <div class="logo">
+                        <img src = "../assets/img/CGLOGOHIGHRES.png"/> 
+                    </div>
+                </div>
+
+                
+                
+            </div>
+            
+            <div class="right-reg">
+                <div class="r-title">
+                    <h1> CREATE YOUR ACCOUNT </h1>
+                </div>
+
+                
+                <h1 id="msg"></h1>
+                <div class="r-form">
+                    <form action="https://script.google.com/macros/s/AKfycbxG74q9jGUdruoe9oxDQVxjOUmNkCR3HLe8JwGWN1OGgvDs2h2ItSxqYKi6UN8Jrb6QAg/exec" method="post">
+                        <input type="email" name="email" placeholder='Email' required><br><br>
+                        
+                        <input type="text" name="fname" placeholder='First Name' required><br><br>
+                        <input type="text" name="lname" placeholder='Last Name' required><br><br>
+                        <input type="text" name="username" placeholder='Username' required><br><br>
+                        <input type="password" name="password" placeholder='Password' id="password" required><br><br>
+                        <input type="checkbox" name="showpass" id="showpass">
+                        <small>show password</small> <br> <br>
+                        <input type="submit" id="register" value="Register">
+                    </form>
+                </div>
+            </div>
+                
+        </div>
+    
+
+        
+
+
+    </div>
+    <script src="./register.js"></script>
+</body>
+</html>

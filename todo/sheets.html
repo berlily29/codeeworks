@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "../js/to-do.js"> </script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>TO-DO</title>
+</head>
+<body>
+    <div class="navbar">
+
+    </div>
+
+    <div class="main-section">
+
+        <div class="show-todo-section">
+            <h1 id="logged"></h1>
+        </div>
+
+        <div class="add-section">
+            <form action="https://script.google.com/macros/s/AKfycbw_WdNnrRqFlYOCWU8SCDqkdZDWRh_VLbbNK_LMpO4XSFJqxSwD0_KY_ciXT89kvnrX/exec" method = "post">
+                <input type = "text" id = "loggeduser" name = "user"/> 
+               
+                <input type = "text" name = "task">
+                
+                <input type = "date" name = "duedate">
+                <input type="submit" id="task" value="Add Task">
+                <div class="login-loading" id = "loading">
+                    <img src = "../assets/img/Iphone-spinner-2.gif"/> 
+                </div>
+                <span id = "msg"> </span>
+            </form>
+
+        </div>
+    
+        <div class="show-todo-section">
+             <div class="d-flex justify-content-center">
+                <div class="spinner-border"
+                     role="status" id="loading">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+          
+            <table id="employees"></table>
+        </div> 
+
+    </div> 
+           
+</body>
+ <script src = "task.js"> </script>
+<script> 
+document.getElementById("logged").innerHTML = localStorage.getItem("loggedEmail")
+document.getElementById("loggeduser").value = localStorage.getItem("loggedEmail")
+
+</script> 
+</html>

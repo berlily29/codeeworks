@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    background: #34495e;
+    width: 100%; 
+    height: 100vh; overflow: hidden;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    font-family: 'Poppins';
+    font-weight: 400;
+
+  }
+  
+
+  .main-section {
+    background: transparent;
+    width: 90%;
+    height: 100%;
+    margin: 30px auto;
+    border-radius: 10px;
+  }
+  
+  .add-section {
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: grid; 
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+  }
+
+  .as-title { 
+
+    
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .as-form { 
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .as-form form {
+    width: 95%; 
+    height: 95%; 
+    display: grid; 
+    grid-template-rows: 33.33% 33.33%  33.33% ;
+  }
+  
+  .add-section input[type=text], .add-section input[type=date] { 
+    transition: 300ms; 
+  }
+  
+  .add-section input[type=text]:focus, .add-section input[type=date]:focus { 
+    transform: scale(1.03)
+  }
+  
+  .add-section input {
+    display: block;
+    width: 95%;
+    height: 40px;
+    margin: 10px auto;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 0px 5px;
+  }
+  
+  .add-section button {
+    display: block;
+    width: 95%;
+    height: 100%;
+    height: 40px;
+    margin: 0px auto;
+    border: none;
+    outline: none;
+    background: #0088FF;
+    color: #fff;
+    
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-section button:hover {
+    box-shadow: 0 2px 2px 0 #ccc, 0 2px 3px 0 #ccc;
+    opacity: 0.7;
+  }
+  
+  .add-section button span {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    font-family: sans-serif
+  }
+
+  .logged-user { 
+    width: 100%; 
+    height: 100%; 
+    border-top-left-radius: 15px;
+    background-color: #0088FF;
+    display: grid; 
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 30% 30%; 
+  }
+  
+  #errorMes {
+    display: block;
+    background: #f2dede;
+    width: 95%;
+    margin: 0px auto;
+    color: rgb(139, 19, 19);
+    padding: 10px;
+    height: 35px;
+  }
+  
+  .show-todo-section {
+    width: 100%;
+    height: 100%;
+    background: #fff3f3;
+   
+    
+   
+    display: grid; 
+    grid-template-rows: 10% 90%;
+  }
+
+  .show-todo-section form {
+    width: 95%; 
+    height: 95%; 
+    display: grid; 
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+  }
+
+  .todo-form { 
+    width: 100%; 
+    height: 100%;
+  }
+  .show-todo-section form #todo { 
+    width: 100%; 
+    height: 100%; 
+    display: grid; 
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+
+
+  .submit-todo { 
+    width: 100%; 
+    height: 100%; 
+    display: grid; 
+    grid-template-columns: 100% ;
+    grid-template-rows: 70% 30%;
+  }
+
+  .st-title, .st-subtitle { 
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .st-title h1 { 
+    font-weight: 900;
+  }
+  .submit-todo input[type=submit]:hover { 
+
+    transform: scale(1.03)
+  }
+ 
+  
+  .todo-item {
+    width: 95%;
+    height: 95%;  
+    margin: 10px auto;
+    padding: 20px 10px;
+    box-shadow: 0 4px 8px 0 #ccc, 0 6px 20px 0 #ccc;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  .todo-item h2 {
+    display: inline-block;
+    padding: 5px 0px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 25px;
+    
+    color: #555;
+  }
+  
+  .todo-item small {
+    display: block;
+    width: 100%;
+    padding: 5px 0px;
+    color: #888;
+    padding-left: 30px;
+    font-size: 20px;
+    
+  }
+
+  .todo-item input[type=text] { 
+    display: none;
+  }
+  
+  .remove-to-do {
+    display: block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    
+    color: rgb(139, 97, 93);
+    text-decoration: none;
+    text-align: right;
+    padding: 0px 5px 8px 0px;
+    border-radius: 50%;
+    transition: background 1s;
+    cursor: pointer;
+  }
+  
+  .remove-to-do:hover {
+    background: rgb(139, 97, 93);
+    color: #fff;
+  }
+  
+  .checked {
+    color: #999 !important;
+    text-decoration: line-through;
+  }
+  
+  .todo-item input {
+    margin: 0px 5px;
+  }
+  
+  .empty {
+    
+    font-size: 16px;
+    text-align: center;
+    color: #cccc;
+  }
+
+  .navbar { 
+    width: 100%; 
+    height: 10%;
+    background-color: rgb(93, 93, 93);
+    display: flex; 
+    /**position: sticky; position: -webkit-sticky;*/
+    top: 0;
+
+
+
+  }
+
+  .nav-left{ 
+    width: 40%; 
+    height: 100%; 
+  }
+
+  .nav-center { 
+    width: 20%; 
+    height: 100%;
+    border: 1px solid red;
+  }
+  
+  .nav-right{ 
+    width: 40%; 
+    height: 100%; 
+  }
+
+  
+  #to-do { 
+    width: 95%;
+  }
+
+
+  #loggeduser { 
+    display: none; 
+  }
+
+
+.login-loading { 
+    
+    width: 100%; 
+    height: 10%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.login-loading img { 
+    width: 10%; 
+    height: 5%; 
+} 
+
+#loading { 
+    display: none   ;
+}
+
+
+
+.splash { 
+  position: absolute;
+  margin-top: -30px;
+  width: 100%; 
+  height: 100%; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0,0,0, 0.9);
+ 
+
+  
+
+}
+
+.splash-box { 
+  border-radius: 15px;
+  width: 40%; 
+  height: 40%; 
+  display: grid; 
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 15% 65%;
+  background-color: #edf0f0;
+  
+}
+
+.spb { 
+  width :100%; 
+  height: 100%; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+
+.spb img { 
+  width: 55%; 
+  height: 85%;
+}
+
+.spb h1 { 
+  font-weight: 600;  
+  font-size: 25px;
+}
+
+.spb h3 { 
+  font-weight: 300;
+}
+
+
+.header { 
+  width :100%; 
+  height: 30%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.header-box { 
+  width: 100%; 
+  height: 100% ;
+  display: grid;
+  
+  grid-template-columns: 30% 70%;
+  height: 100%; 
+}
+
+.lu-div {
+  
+  width: 100%;
+  height: 100%; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+#lutitle h1 { 
+  font-size: 1.3vw;
+  
+  color: white;
+  padding: 25px;
+  border-radius: 25px;
+  font-weight:700;
+}
+
+.lu-btn { 
+  width: 55%; 
+  height: 55%; 
+  background-color: white; 
+  border-radius: 15px;
+  transition: 300ms;
+}
+
+.lu-btn:hover { 
+  transform: scale(1.03)
+}
+
+.lu-btn a { 
+  width :100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+  color:#016cca;
+  
+}
+
+#type { 
+  display: none;
+}
+
+.add-section input[type=submit] { 
+  background-color: #0088FF;
+  color: white;
+  transition: 300ms;
+  border: none;
+}
+
+.add-section input[type=submit]:hover{ 
+  background-color: #026dca;
+}
+
+
+.add-splash { 
+  width: 100%; 
+  height: 100%; 
+  position: absolute;
+  background-color: rgb(0,0,0,0.9);
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  margin-top: -30px;
+
+}
+
+.asp-box {
+  width: 30%; 
+  height: 40%;
+  background-color: #e4eff0;
+  display: grid; 
+  grid-template-columns: 100% ;
+  grid-template-rows: 20% 80%;
+  border-radius: 15px;
+  
+}
+
+.asp-title { 
+  width: 100%; 
+  height: 100%; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.asp-title h1 { 
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.asp-gif { 
+  width: 100%; 
+  height: 100%; 
+  display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.asp-gif img { 
+  width: 55%; 
+  height: 100%
+}
+
+

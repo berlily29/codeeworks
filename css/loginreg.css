@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root { 
+    --bg: #39A7FF;
+}
+*{ 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Poppins';
+    width :100%; 
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.container {
+    width: 100%; 
+    height: 100%; 
+    display :flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: #0059a2;
+}
+
+.login-box { 
+    width: 25%; 
+    height: 90%;
+    border-radius: 25px;
+    background-color: white;
+    display : flex;
+    flex-direction: column;
+}
+
+
+
+
+.logo-div { 
+    width: 100%; 
+    height: 30%; 
+    
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img { 
+    width: 55%; 
+    height: 90%;
+} 
+
+.logo-img img {
+    width :100%; 
+    height: 100%;
+}
+
+
+.login-title { 
+width: 100%;
+height: 10%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.login-title h1 { 
+    color: var(--bg);
+    font-weight: 600;
+}
+
+
+.login-form {
+    width: 100%; 
+    height: 40%;
+    display: flex; 
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.login-form form { 
+    width: 100%;
+    height:100%;
+    text-align: center;
+}
+
+.login-loading { 
+    
+    width: 100%; 
+    height: 10%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.login-loading img { 
+    width: 10%; 
+    height: 50%; 
+} 
+
+#loading { 
+    display: none  ;
+}
+
+
+form input { 
+    font-family: 'Poppins';
+    
+    
+    border-radius: 10px;
+    border: none;
+    transition :300ms;
+}
+
+input[type=email]:focus, input[type=password]:focus, input[type=text]:focus{ 
+    transform: scale(1.02)
+}
+
+input[type=email],input[type=password],input[type=text] { 
+    width: 70%;
+    padding: 10px;
+    border: 1px solid rgb(0,0,0,0.2);
+    
+}
+input[type = submit] { 
+    font-weight: 500;
+    font-size: 1.2vw;
+    transition: 300ms;
+    width: 70%;
+    background-color: var(--bg);
+    color: white;
+}
+
+.r-form input[type = submit] { 
+    width : 80%;
+    height: 10%; 
+} 
+
+
+input[type=submit]:hover { 
+    background-color: #157acd;
+}
+
+#msg { 
+    font-size: 1vw;
+
+    color: rgb(111, 0, 0);
+}
+
+.login-extra { 
+    width: 100%; 
+    height: 10%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.login-extra span, .login-extra a {
+    font-size: 12px;
+ }
+
+
+.reg-box { 
+    width: 80%; 
+    height: 90%;
+    border-radius: 25px;
+    background-color: white;
+    display : grid;
+    grid-template-columns: 40% 60%;
+}
+
+
+
+.left-reg {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: var(--bg);
+    width :100%;
+    height: 100%;
+    display: flex;
+    
+    flex-direction:column ;
+}
+
+.b2l { 
+    width: 100%; 
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: end; 
+ 
+    
+}
+
+.b2l-btn { 
+    width: 85%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg);
+    background-color: white;
+    transition :150ms;
+    border-radius: 15px;
+}
+
+.b2l-btn:hover { 
+    background-color: rgb(242, 242, 242)
+}
+
+.b2l-btn  a { 
+    font-size: 1.3vw;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--bg);
+}
+
+
+.left-logo { 
+    height: 40%; 
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: top;
+    
+}
+
+.logo { 
+    padding: 10px;
+    width: 100%; 
+    height: 90%;
+    display: flex; 
+    justify-content: center;
+    align-items: top;
+}
+
+.logo img {
+    width:55%; 
+    height: 100%; 
+}
+
+.right-reg { 
+    width :100%; 
+    height: 100%;
+}
+
+.r-title { 
+    width: 100%; 
+    height: 20%;
+    display: flex;
+
+    align-items: center;
+   
+}
+
+.r-title h1 { 
+    margin-left: 25px;
+    text-decoration:overline;
+
+    color: #2897f3; 
+    font-weight: 400;
+    font-size: 2vw;
+}
+
+.r-form  {
+    width :100%; 
+    height: 80%;
+
+}
+
+.r-form form {
+    padding-left :25px; 
+    width: 100%; 
+    height:  100%;
+    
+}
+
+.r-form input[type=text], 
+.r-form input[type=email], 
+.r-form input[type=password]{ 
+    width: 90%;
+}
+
+
+

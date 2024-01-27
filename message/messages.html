@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <script src="./message.js"></script>
+    <link rel = "stylesheet" href = "../css/msg.css"/> 
+</head>
+<body>
+    <div class="splash-msg" id = "splash-box">
+        <div class="splash-box">
+            <div class="splash-title">
+                <h1> Loading up your Inbox!  </h1>
+            </div>
+
+            <div class="splash-gif">
+                <img src = "../assets/img/loading_add.gif"/> 
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div class="back">
+                <div class="back-btn">
+                    <a href = "../dashboard.html">
+                        ↲ Back to Home
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="title">
+                <div class="main-title">
+                    <h1> MESSAGES - Inbox</h1>
+                </div> 
+
+                <div class="sub-title">
+                    <h2 id = "loggeduser"> </h2>
+                </div>
+
+            </div>
+
+            <div class="sent-buttons">
+                <div class="sb-box">
+                    <div class="sb-btn">
+                        <a href = "outbox.html"> OUTBOX</a>
+                    </div>
+                </div>
+                
+                <div class="sb-box">
+                    <div class="sb-btn">
+                        <a href = "create_msg.html">  SEND A MESSAGE ➤ </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-content">
+            <div class="con-box">
+                <div class="con-header">
+                    <div class="ch-field" id = "leftcor">
+                        <h1> Sender </h1>
+                    </div>
+
+                    <div class="ch-field">
+                        <h1> Date </h1>
+                    </div>
+
+                    <div class="ch-field">
+                        <h1> Time </h1>
+                    </div>
+
+                    <div class="ch-field" id = "rightcor">
+                        <h1> Message </h1>
+                    </div>
+
+
+                </div>
+
+                <div class="con-msg" id = "con-msg">
+                    
+
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+</body>
+<script src = "getmsg.js"> </script> 
+<script>
+    document.getElementById("loggeduser").innerText = localStorage.getItem("loggedEmail")
+</script>
+
+</html>

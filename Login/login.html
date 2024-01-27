@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CodeeWorks</title>
+    <link rel = "stylesheet" href = "../css/loginreg.css"/> 
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="logo-div">
+                <div class="logo-img">
+                    <img src = "../assets/img/CGLOGOHIGHRES.png"/>
+                </div>
+            </div>
+
+            <div class="login-title">
+                <h1> LOGIN </h1>
+            
+
+            </div>
+  
+            <div class="login-form">
+                <form action="https://script.google.com/macros/s/AKfycbxzbTFmxrN90o7sO0WiGvENskChLedjlcxXhYzBt3LpFUwrGGZiNoqW6l8ev6NTIHdr/exec" method="post" name = 'login-form'>
+                    <input type="email" name="email" placeholder='Email' id = "email" required><br><br>
+                    <input type="password" name="password" placeholder='Password' id="password" required><br><br>
+                  
+                    <input type="checkbox" name="showpass" id="showpass">
+                    <label for "showpass"> Show Password </label> 
+                   
+                    <br> <br>
+                    
+                    <input type="submit" id="login" value="Login">
+                    
+                </form>
+            </div> 
+            <div class="login-loading" id = "loading">
+                <img src = "../assets/img/Iphone-spinner-2.gif"/> 
+            </div>
+
+            <div class="login-extra">
+                <small id = "msg"> </small>
+                <span> Don't have an account?  <a href = "../Register/register.html"> Register now! </a> </span> 
+            </div>
+           
+        </div>
+            
+    
+
+    </div>
+
+    <script src="./login.js"></script>
+
+</body>
+</html>
